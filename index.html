@@ -5,7 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I miei animali Preferiti</title>
     <link rel="stylesheet" href="style.css" />
-  
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const Animali = () => {
+        const animals = [
+          "rinoceronte",
+          "elefante",
+          "giraffa",
+          "pappagallo",
+          "zebra",
+        ];
+        return (
+          <details>
+            <summary>Lista Animali</summary>
+            <ul>
+              {animals.map((animal, i) => {
+                return <li key="i">{animal}</li>;
+              })}
+            </ul>
+          </details>
+        );
+      };
+    </script>
   </head>
   <body>
     <header>
